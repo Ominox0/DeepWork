@@ -255,3 +255,56 @@ input:focus {
     padding: 0.75rem 1.5rem;
     font-weight: 600;
 }
+
+.pro-banner {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 0.75rem;
+    margin-bottom: 2rem;
+    text-align: left;
+    gap: 1.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.pro-tag {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+}
+
+.pro-text {
+    flex: 1;
+}
+
+.pro-text strong {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.pro-text span {
+    font-size: 0.875rem;
+    opacity: 0.9;
+}
+
+.pro-btn {
+    background: white;
+    color: #4f46e5;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    transition: transform 0.2s;
+}
+
+.pro-btn:hover {
+    transform: scale(1.05);
+}
