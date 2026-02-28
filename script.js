@@ -88,3 +88,24 @@ taskInput.addEventListener('keypress', (e) => {
 
 // Initialize display
 updateDisplay();
+
+// Ad Blocker Detection
+async function checkAdBlocker() {
+    let isBlocked = false;
+    try {
+        const url = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
+        const response = await fetch(url, { method: 'HEAD', mode: 'no-cors' });
+        // If the script can't be fetched, it's likely blocked
+    } catch (error) {
+        isBlocked = true;
+    }
+
+    if (isBlocked) {
+        document.getElementById('adblock-warning').classList.remove('hidden');
+    }
+}
+
+// Check for ad blocker after a short delay to allow it to load
+window.addEventListener('load', () => {
+    setTimeout(checkAdBlocker, 2000);
+});
